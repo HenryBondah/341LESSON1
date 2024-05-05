@@ -9,7 +9,7 @@ MongoClient.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTo
         console.error('Failed to connect to MongoDB', err);
         process.exit(1);
     }
-    app.locals.db = client.db('myAppDb');
+    app.locals.db = client.db('contacts');
     console.log("Connected to MongoDB");
 
     // Require routes here after DB connection is established
