@@ -1,10 +1,1 @@
-GET http://localhost:3000 HTTP/1.1 
-
-###
-GET http://localhost:3000/second HTTP/1.1 
-
-###
-GET http://localhost:3000/third HTTP/1.1 
-
-###
-GET http://localhost:3000/contacts HTTP/1.1 
+GET http://localhost:8080/contacts HTTP/1.1 
