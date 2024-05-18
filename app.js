@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 // Redirect default route to contacts
 app.get('/', (req, res) => {
-  res.redirect('/contacts');
+  res.redirect('/api-docs');
 });
 
 app.use('/', require('./routes'));
