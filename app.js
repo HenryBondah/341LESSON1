@@ -1,7 +1,9 @@
-// app.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const port = process.env.PORT || 8080;
 const app = express();
@@ -17,14 +19,14 @@ app.get('/', (req, res) => {
   res.redirect('/contacts');
 });
 
-app.use('/contacts', require('./routes/contacts'));
 app.use('/', require('./routes'));
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
+    app.listen(port, () => {
+      console.log(`Connected to DB and listening on ${port}`);
+    });
   }
 });
