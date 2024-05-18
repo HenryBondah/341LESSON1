@@ -3,10 +3,10 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'My API',
-    description: 'Description of my API',
+    description: 'Contact API',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: ['localhost:8080', 'https://three41lesson1.onrender.com'],
+  schemes: ['http', 'https'],
 };
 
 const outputFile = './swagger-output.json';
