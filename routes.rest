@@ -1,31 +1,29 @@
-// LOCALHOST REQUESTS
-
 // Retrieve all contacts
+GET http://localhost:8080/api-docs
+
 ###
+// Retrieve all contacts
 GET http://localhost:8080/contacts
-###
 
+###
 // Retrieve a single contact by ID
-###
 GET http://localhost:8080/contacts/6640406aa12dd5737d17983b
-###
 
-// Create a new contact
 ###
+// Create a new contact
 POST http://localhost:8080/contacts
 Content-Type: application/json
 
 {
-  "firstName": "ama",
+  "firstName": "kofi",
   "lastName": "nelson",
   "email": "ama@example.com",
   "favoriteColor": "blue",
   "birthday": "01/01/1991"
 }
-###
 
-// Update an existing contact by ID
 ###
+// Update an existing contact by ID
 PUT http://localhost:8080/contacts/664309dd893c1c55225e7e46
 Content-Type: application/json
 
@@ -36,9 +34,7 @@ Content-Type: application/json
   "favoriteColor": "black",
   "birthday": "01/10/1991"
 }
-###
 
+###
 // Delete a contact by ID
-###
 DELETE http://localhost:8080/contacts/664309dd893c1c55225e7e46
-###
