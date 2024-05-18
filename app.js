@@ -10,11 +10,13 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Update '*' to your domain if necessary
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 });
 
-// Redirect default route to contacts
+// Redirect default route to api-docs
 app.get('/', (req, res) => {
   res.redirect('/api-docs');
 });
